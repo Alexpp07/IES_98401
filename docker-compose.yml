@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  101app:
+    image: 101app
+    build:
+      context: lab1/lab1_4/app
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000

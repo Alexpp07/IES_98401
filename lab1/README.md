@@ -1,8 +1,8 @@
 # IES_98401
 
+Lab1 by Alexandre Pereira Pinto
 
 ## LAB 1
-
 
 ### lab1_2
 
@@ -51,3 +51,83 @@ Ao executar o projeto é possível passar argumentos através do terminal. Ao ex
     ```
 
 ### lab1_3
+
+Para adicionar código a um repositório a partir de uma pasta já criada, não deve ser feito `git clone`, mas sim iniciado um repositório novo na pasta existente.
+
+```bash
+$ cd project_folder
+$ git init
+$ git remote add origin <REMOTE_URL>
+$ git add .
+$ git commit -m "Initial commit"
+$ git push -u origin main
+```
+
+### lab1_4
+
+O **Docker** é como que um Sistema Operativo *light* que corre sobre o nosso SO (virtualização ao nível do SO) e que permite de forma simples construir aplicações em *containers*. 
+
+Um ***container*** não é mais do que <u>um processo em execução com algumas funcionalidades de encapsulamento que o isolam do anfitrião e dos restantes *containers*</u>. Cada um utiliza o seu sistema de ficheiros, providenciado por uma ***Docker Image***, que agrupa o seu próprio *software*, bibliotecas e arquivos de configuração.
+
+***Dockerfile*** é um script de instruções a usar para criar uma container image.
+
+Contrasta com as VM, que correm um SO virtual completo, consumindo muitos mais recursos do que os necessários para a aplicação que vão executar.
+
+A organização em *containers* permite simplificar o processo de desenvolvimento e execução, oferecendo:
+
+- **Flexibilidade**. Até as aplicações mais complexas podem ser colocadas num *container*;
+- **Leveza**. <u>Partilham o núcleo, tornando-los muito mais eficientes do que as máquinas virtuais;</u>
+- **Portabilidade**. Uma aplicação pode ser construída localmente, *deployed* na *cloud* e executada por todos;
+- **Altamente desacoplado**. São sistemas maioritariamente fechados, podendo ser substituídos sem afetar os restantes.
+- **Escalabilidade**. Podem ser aumentados e distribuídos;
+- **Segurança**. Por defeito, impõem grandes restrições e isolamentos aos processos.
+
+**Arquitetura Portainer** consiste em dois elementos: o Portainer Server e o Portainer Agent. Ambos são executados como containers leves num container já criado. O Portainer Agent deve ser enviado para todos os nós do cluster e configurado de forma a reportar para o container do Portainer Server.
+
+### lab1_5
+
+Importante: não esquecer de alterar as dependências.
+
+
+## Review Questions
+
+A)
+O ciclo de vida padrão do Maven (***Maven Default***) tem várias fases diferentes, entre elas:
+**validação** - são validadas as informações necessárias e se o projeto está correto;
+**compilação** - compila-se o código fonte;
+**teste** - são utilizadas estruturas de teste no código fonte;
+**pacote** - criação de um ficheiro jar;
+**verificação** - executar verificações nos resultados dos testes para garantir que os critérios são cumpridos;
+**instalação** - instalar o pacote no repositório local e das suas dependências;
+**entregar** - copia-se o pacote final para o repositório remoto para compartilhar com outros desenvolvedores e projetos.
+
+O ***Maven clean*** é utilizado quando queremos remover os ficheiros gerados ao longo da construção da diretoria do projeto.
+
+O ***Maven site*** é utilizado para gerar um site para o projeto.
+
+
+B)
+***Maven*** é uma ferramenta de construção cujo objetivo principal é configurar um projeto e lidar com as atividades de construção e artefatos resultantes. Pode ser usado para executar um projeto usando diferentes plug-ins para executar uma classe específica.
+
+
+C)
+```bash
+git clone
+git branch [modifications] 
+git add .
+git commit -m "COMMENTS"
+git push
+```
+
+
+D)
+Num projeto de equipa devemos escrever comentários de forma a que todos consigam perceber o que é que o novo código ou o código que foi alterado faz. Algumas "boas práticas" para melhorar estes comentários poderão ser:
+- utilizar espaços em branco para separar diversas secções;
+- explicar detalhadamente o código escrito;
+- explicar qual foi o problema resolvido;
+- explicar o porquê de ter feito daquelas mudanças;
+- colocar o assunto em letra maiúscula;
+
+
+E)
+Os volumes do ***Docker*** são sistemas de arquivos montados em containers Docker para preservar os dados gerados pelo container em execução. Os volumes são armazenados no host, independente do ciclo de vida do container. Isso torna os dados seguros se um container for excluído e permite que os usuários façam backup dos dados e compartilhem sistemas de arquivos entre containers facilmente.
