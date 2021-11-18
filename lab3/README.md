@@ -57,3 +57,20 @@ Alterou-se o ficheiro EmployeeRepository para que fosse possível pesquisar atra
 
 
 ### lab3_3
+
+Não consegui realizar esta parte do guião toda. Criar o projeto maven com as dependências necessárias. Criei também algumas pastas e ficheiros para começar a fazer a web application, alterei o ficheiro pom.xml e ainda um Dockerfile.dockerfile.
+
+
+### Review Questions
+
+A. Enquanto que o @Controller corresponde aos controladores MVC, o @RestController é uma combinação do @Controller e da anotação @ResponseBody.
+O @Controller cria um Map of Model Object e procura uma view, por outro lado, o @RestController retorna dados de objetos e objetos gravados diretamente na resposta HTTP (JSON, XML...).
+
+B.
+
+C. 
+-> @Table - Cria a tabela na base de dados da aplicação;
+-> @Id - A variável transforma-se na coluna id da tabela da base de dados. É incrementado automaticamente;
+-> @Columm - Permite que a variável se torne numa coluna na tabela da base de dados.
+
+D. O @AutoWired foi usado na classe do Rest Controller visto que permite injetar a dependência do objeto implicitamente.
